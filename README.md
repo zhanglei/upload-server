@@ -5,7 +5,15 @@ upload-server
 
 运行服务器程序
 ----
-修改RootPath，上传文件的根目录。
+修改上传文件的根目录，和允许的最大尺寸。
+```php
+//设置上传文件的存储目录
+$svr->setRootPath('/tmp/');
+//设置允许上传的文件最大尺寸
+$svr->setMaxSize(100*1024*1024);
+```
+
+在命令行中运行
 ```shell
 php server.php
 ```
